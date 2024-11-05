@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello Java</title>
+</head>
+<body>
+<h1 th:text="${something}"/>
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">id</th>
+        <th scope="col">model</th>
+        <th scope="col">series</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="cars: ${cars}">
+        <td th:text="${cars.id}">id</td>
+        <td th:text="${cars.model}">model</td>
+        <td th:text="${cars.series}">series</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
